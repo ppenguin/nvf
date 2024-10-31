@@ -80,13 +80,17 @@ everyone.
 
 [ocaml-lsp]: https://github.com/ocaml/ocaml-lsp
 [new-file-template.nvim]: https://github.com/otavioschwanck/new-file-template.nvim
+[neo-tree.nvim]: https://github.com/nvim-neo-tree/neo-tree.nvim
 
 - Add [ocaml-lsp] support
 
 - Fix "Emac" typo
 
 - Add [new-file-template.nvim] to automatically fill new file contents using
-  templates.
+  templates
+
+- Make [neo-tree.nvim] display file icons properly by enabling
+  `visuals.nvimWebDevicons`
 
 [diniamo](https://github.com/diniamo):
 
@@ -108,6 +112,7 @@ everyone.
   plugin's options can now be found under `indentBlankline.setupOpts`, the
   previous iteration of the module also included out of place/broken options,
   which have been removed for the time being. These are:
+
   - `listChar` - this was already unused
   - `fillChar` - this had nothing to do with the plugin, please configure it
     yourself by adding `vim.opt.listchars:append({ space = '<char>' })` to your
@@ -186,8 +191,28 @@ everyone.
 - Add [python-lsp-server](https://github.com/python-lsp/python-lsp-server) as an
   additional Python LSP server.
 
+- Add [](#opt-vim.options) to set `vim.o` values in in your nvf configuration
+  without using additional Lua. See option documentation for more details.
+
+- Add [](#opt-vim.dashboard.dashboard-nvim.setupOpts) to allow user
+  configuration for [dashboard.nvim](https://github.com/nvimdev/dashboard-nvim)
+
+- Update `lualine.nvim` input and add missing themes:
+  - Adds `ayu`, `gruvbox_dark`, `iceberg`, `moonfly`, `onedark`,
+    `powerline_dark` and `solarized_light` themes.
+
 [ppenguin](https://github.com/ppenguin):
 
 - Telescope:
   - Fixed `project-nvim` command and keybinding
   - Added default ikeybind/command for `Telescope resume` (`<leader>fr`)
+
+[Soliprem](https://github.com/Soliprem):
+
+- Add LSP and Treesitter support for R under `vim.languages.R`.
+- Add Otter support under `vim.lsp.otter` and an assert to prevent conflict with
+  ccc
+
+[Bloxx12](https://github.com/Bloxx12):
+
+- Fix internal breakage in `elixir-tools` setup.
