@@ -301,4 +301,8 @@ https://github.com/gorbit99/codewindow.nvim
 
 - Fix `vim.formatter.conform-nvim.setupOpts.formatters` type for correct merging
 
+[SmackleFunky](https://github.com/SmackleFunky):
+
+- Updated codecompanion-nvim adapters to allow specifying a model.
+
 <!-- vim: set textwidth=80: -->
