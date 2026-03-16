@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (builtins) attrNames;
-  inherit (lib.options) mkEnableOption mkOption;
+  inherit (lib.options) mkEnableOption mkOption literalExpression;
   inherit (lib.meta) getExe;
   inherit (lib.modules) mkIf mkMerge;
   inherit (lib.types) enum listOf;
@@ -47,12 +47,22 @@ in {
     enable = mkEnableOption "HCL support";
 
     treesitter = {
-      enable = mkEnableOption "HCL treesitter" // {default = config.vim.languages.enableTreesitter;};
+      enable =
+        mkEnableOption "HCL treesitter"
+        // {
+          default = config.vim.languages.enableTreesitter;
+          defaultText = literalExpression "config.vim.languages.enableTreesitter";
+        };
       package = mkGrammarOption pkgs "hcl";
     };
 
     lsp = {
-      enable = mkEnableOption "HCL LSP support" // {default = config.vim.lsp.enable;};
+      enable =
+        mkEnableOption "HCL LSP support"
+        // {
+          default = config.vim.lsp.enable;
+          defaultText = literalExpression "config.vim.lsp.enable";
+        };
       servers = mkOption {
         type = listOf (enum (attrNames servers));
         default = defaultServers;
@@ -61,7 +71,12 @@ in {
     };
 
     format = {
-      enable = mkEnableOption "Enable HCL formatting" // {default = config.vim.languages.enableFormat;};
+      enable =
+        mkEnableOption "HCL formatting"
+        // {
+          default = config.vim.languages.enableFormat;
+          defaultText = literalExpression "config.vim.languages.enableFormat";
+        };
       type = mkOption {
         type = deprecatedSingleOrListOf "vim.language.hcl.format.type" (enum (attrNames formats));
         default = defaultFormat;

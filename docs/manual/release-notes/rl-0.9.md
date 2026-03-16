@@ -6,6 +6,7 @@
   `vimPlugins.nvim-treesitter`. Namely, it changes from the frozen `master`
   branch to the new main branch. This change removes incremental selections, so
   it is no longer available.
+
 - [obsidian.nvim] now uses a maintained fork which has removed the `dir`
   setting. Use `workspaces` instead:
 
@@ -51,6 +52,8 @@ Some other settings and commands are now deprecated but are still supported.
 - Added [taplo](https://taplo.tamasfe.dev/) as the default formatter and lsp for
   `languages.toml` so we don't default to AI-Slop.
 
+- Added `json5` into `languages.json`. Some options where renamed.
+
 ## Changelog {#sec-release-0-9-changelog}
 
 [taylrfnt](https://github.com/taylrfnt)
@@ -79,6 +82,8 @@ Some other settings and commands are now deprecated but are still supported.
 [NotAShelf](https://github.com/notashelf):
 
 - Lazyload noice.nvim and nvim-web-devicons on `DeferredUIEnter`
+- Allow nulling treesitter packages for various language modules, filter `null`
+  values in `vim.treesitter.grammars`.
 
 [jfeo](https://github.com/jfeo):
 
@@ -219,6 +224,9 @@ Some other settings and commands are now deprecated but are still supported.
 
 - Added [`golangci-lint`](https://golangci-lint.run/) for more diagnostics.
 
+- Added [`gopher.nvim`](https://github.com/olexsmir/gopher.nvim) for extra
+  actions in `languages.go`.
+
 - updated default filetypes for
   [harper-ls](https://github.com/Automattic/harper) to match what they are
   supposed to be.
@@ -228,10 +236,18 @@ Some other settings and commands are now deprecated but are still supported.
 - Fix `languages.hcl` init, depending on `comment-nvim` by checking if it is
   enabled. Fixes a crash (#1350).
 
+- Add `languages.fluent` using the official plugin. This only provides
+  highlighting.
+
 - Added Debugging support to `languages.php`.
 
 - Added Formatting support to `languages.php` via
   [PHP-CS-Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer).
+
+- Added minimal `languages.twig`. Currently using [djlint](https://djlint.com/)
+  for most options, as better alternatives like
+  [twig-cs-fixer](https://github.com/VincentLanglet/Twig-CS-Fixer) aren't
+  packaged for nix.
 
 - Didn't Add
   [`syntax-gaslighting`](https://github.com/NotAShelf/syntax-gaslighting.nvim),
@@ -281,5 +297,19 @@ https://github.com/gorbit99/codewindow.nvim
 
 - [img-clip.nvim]'s configuration now has it's own DAG entry, separate from
   image-nvim.
+
+[phanirithvij](https://github.com/phanirithvij):
+
+[elm-language-server]: https://github.com/elm-tooling/elm-language-server
+
+- Add Elm support with [elm-language-server]
+
+[alv-around](https://github.com/alv-around):
+
+- Fix `vim.assistant.codecompanion-nvim` lazy loading with [blink-cmp]
+
+[foobar14](https://github.com/foobar14):
+
+- Fix `vim.formatter.conform-nvim.setupOpts.formatters` type for correct merging
 
 <!-- vim: set textwidth=80: -->
