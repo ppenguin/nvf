@@ -78,7 +78,7 @@ in {
           defaultText = literalExpression "config.vim.languages.enableFormat";
         };
       type = mkOption {
-        type = deprecatedSingleOrListOf "vim.language.hcl.format.type" (enum (attrNames formats));
+        type = listOf (enum (attrNames formats));
         default = defaultFormat;
         description = "HCL formatter to use";
       };

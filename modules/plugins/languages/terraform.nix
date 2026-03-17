@@ -64,7 +64,6 @@ in {
           default = config.vim.lsp.enable;
           defaultText = literalExpression "config.vim.lsp.enable";
         };
-
       servers = mkOption {
         type = listOf (enum (attrNames servers));
         default = defaultServers;
@@ -73,9 +72,14 @@ in {
     };
 
     format = {
-      enable = mkEnableOption "Enable Terraform formatting" // {default = config.vim.languages.enableFormat;};
+      enable =
+        mkEnableOption "Enable Terraform formatting"
+        // {
+          default = config.vim.languages.enableFormat;
+          defaultText = literalExpression "config.vim.languages.enableFormat";
+        };
       type = mkOption {
-        type = deprecatedSingleOrListOf "vim.language.terraform.format.type" (enum (attrNames formats));
+        type = listOf (enum (attrNames formats));
         default = defaultFormat;
         description = "Terraform formatter to use";
       };
