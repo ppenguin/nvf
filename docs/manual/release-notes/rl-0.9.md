@@ -29,6 +29,10 @@
   is unlikely to cause any noticeable change in behavior or breakage, it's
   mentioned just in case.
 
+- `vim.treesitter.foldByDefault` is removed. Folding behavior should be
+  controlled via `vim.options.foldenable` directly instead. RIP
+  `vim.treesitter.foldByDefault` 2026-03-19 - 2026-03-19.
+
 [Snoweuph](https://github.com/snoweuph)
 
 - "Correct `languages.go.treesitter` to contain all Go file types.
