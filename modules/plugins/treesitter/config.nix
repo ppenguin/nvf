@@ -6,7 +6,6 @@
   inherit (lib.modules) mkIf;
   inherit (lib.lists) optionals;
   inherit (lib.nvim.dag) entryAfter;
-  inherit (lib.trivial) boolToString;
 
   cfg = config.vim.treesitter;
 in {
@@ -55,7 +54,6 @@ in {
             callback = function()
               vim.wo[0][0].foldmethod = "expr"
               vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-              vim.o.foldenable = ${boolToString cfg.foldByDefault}
             end,
           })
         ''}

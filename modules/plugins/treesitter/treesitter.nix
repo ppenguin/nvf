@@ -10,7 +10,6 @@ in {
     enable = mkEnableOption "treesitter, also enabled automatically through language options";
 
     fold = mkEnableOption "fold with treesitter";
-    foldByDefault = mkEnableOption "folding by default when a file is opened";
     autotagHtml = mkEnableOption "autoclose and rename html tag";
 
     grammars = mkOption {
