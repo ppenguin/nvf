@@ -22,7 +22,6 @@
   ```
 
   Some other settings and commands are now deprecated but are still supported.
-
   - The `setupOpts.mappings` options were also removed. Use the built-in Neovim
     settings (nvf's {option}`vim.keymaps`)
 
@@ -35,7 +34,6 @@
 - "Correct `languages.go.treesitter` to contain all Go file types.
   `languages.go.treesitter.package` is now `languages.go.treesitter.goPackage`.
   New are:
-
   - `languages.go.treesitter.goPackage`.
 
   - `languages.go.treesitter.gomodPackage`.
@@ -70,7 +68,7 @@
   following:
 
   ```shell
-  (class: "nixos") cannot be imported into a module 
+  (class: "nixos") cannot be imported into a module
   evaluation that expects class "darwin".
   ```
 
@@ -165,7 +163,9 @@
       - Mappings are now expected to be set using the built-in Neovim APIs,
         managed by `vim.keymaps` in nvf, instead of `mappings` options.
       - Some option defaults have changed.
+
     - And more.
+
   - Automatically configure an enabled picker in the order mentioned above, if
     any are enabled.
   - Add integration with `snacks.image` for rendering workspace/vault assets.
@@ -317,5 +317,9 @@ https://github.com/gorbit99/codewindow.nvim
 [foobar14](https://github.com/foobar14):
 
 - Fix `vim.formatter.conform-nvim.setupOpts.formatters` type for correct merging
+
+[tlvince](https://github.com/tlvince):
+
+- Added configuration option for `foldenable`
 
 <!-- vim: set textwidth=80: -->

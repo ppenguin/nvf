@@ -6,6 +6,7 @@
   inherit (lib.modules) mkIf;
   inherit (lib.lists) optionals;
   inherit (lib.nvim.dag) entryAfter;
+  inherit (lib.trivial) boolToString;
 
   cfg = config.vim.treesitter;
 in {
@@ -54,10 +55,7 @@ in {
             callback = function()
               vim.wo[0][0].foldmethod = "expr"
               vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
-              -- This is optional, but is set rather as a sane default.
-              -- If unset, opened files will be folded by automatically as
-              -- the files are opened
-              vim.o.foldenable = false
+              vim.o.foldenable = ${boolToString cfg.foldByDefault}
             end,
           })
         ''}
