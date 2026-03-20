@@ -22,16 +22,22 @@
   ```
 
   Some other settings and commands are now deprecated but are still supported.
-
   - The `setupOpts.mappings` options were also removed. Use the built-in Neovim
     settings (nvf's {option}`vim.keymaps`)
+
+- `languages.{terraform,hcl}`: LSP servers now default to `tofu-ls`. While this
+  is unlikely to cause any noticeable change in behavior or breakage, it's
+  mentioned just in case.
+
+- `vim.treesitter.foldByDefault` is removed. Folding behavior should be
+  controlled via `vim.options.foldenable` directly instead. RIP
+  `vim.treesitter.foldByDefault` 2026-03-19 - 2026-03-19.
 
 [Snoweuph](https://github.com/snoweuph)
 
 - "Correct `languages.go.treesitter` to contain all Go file types.
   `languages.go.treesitter.package` is now `languages.go.treesitter.goPackage`.
   New are:
-
   - `languages.go.treesitter.goPackage`.
 
   - `languages.go.treesitter.gomodPackage`.
@@ -53,6 +59,11 @@
 
 ## Changelog {#sec-release-0-9-changelog}
 
+[midischwarz12](https://github.com/midischwarz12):
+
+- Changed the prettier-plugin-astro build to use `writableTmpDirAsHomeHook` to
+  avoid pnpm hook failures in sandboxed builds.
+
 [taylrfnt](https://github.com/taylrfnt)
 
 - Introduce a `darwinModule` option for Darwin users. The ergonomics of
@@ -61,7 +72,7 @@
   following:
 
   ```shell
-  (class: "nixos") cannot be imported into a module 
+  (class: "nixos") cannot be imported into a module
   evaluation that expects class "darwin".
   ```
 
@@ -98,6 +109,14 @@
 [Libadoxon](https://github.com/Libadoxon):
 
 - `toggleterm` open map now also works when in terminal mode
+
+[ppenguin](https://github.com/ppenguin):
+
+- Improved/harmonized for `terraform` and `hcl`:
+  - formatting (use `terraform fmt` or `tofu fmt` for `tf` files)
+  - LSP config
+  - Added `tofu` and `tofu-ls` as (free) alternative to `terrraform` and
+    `terraform-ls`
 
 [jtliang24](https://github.com/jtliang24):
 
@@ -148,7 +167,9 @@
       - Mappings are now expected to be set using the built-in Neovim APIs,
         managed by `vim.keymaps` in nvf, instead of `mappings` options.
       - Some option defaults have changed.
+
     - And more.
+
   - Automatically configure an enabled picker in the order mentioned above, if
     any are enabled.
   - Add integration with `snacks.image` for rendering workspace/vault assets.
@@ -304,5 +325,9 @@ https://github.com/gorbit99/codewindow.nvim
 [SmackleFunky](https://github.com/SmackleFunky):
 
 - Updated codecompanion-nvim adapters to allow specifying a model.
+
+[tlvince](https://github.com/tlvince):
+
+- Added configuration option for `foldenable`
 
 <!-- vim: set textwidth=80: -->
