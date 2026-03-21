@@ -31,6 +31,7 @@ in {
     ./json.nix
     ./lua.nix
     ./markdown.nix
+    ./tex.nix
     ./nim.nix
     ./vala.nix
     ./nix.nix
