@@ -191,6 +191,14 @@
     biome = {
       command = getExe pkgs.biome;
     };
+
+    biome-check = {
+      command = getExe pkgs.biome;
+    };
+
+    biome-organize-imports = {
+      command = getExe pkgs.biome;
+    };
   };
 
   # TODO: specify packages
@@ -211,6 +219,14 @@
           ".eslintrc.js"
           ".eslintrc.yml"
         ];
+      };
+    };
+    biomejs = let
+      pkg = pkgs.biome;
+    in {
+      package = pkg;
+      config = {
+        cmd = getExe pkg;
       };
     };
   };
@@ -326,7 +342,7 @@ in {
             # .tsx/.jsx files
             typescriptreact = cfg.format.type;
           };
-          setupOpts.formatters =
+          formatters =
             mapListToAttrs (name: {
               inherit name;
               value = formats.${name};

@@ -249,6 +249,13 @@
 - Added [`tsgo`](https://github.com/microsoft/typescript-go) as an LSP to
   `languages.ts`.
 
+- Fix `languages.ts` registration of formatters.
+
+- Added `biome-check` and `biome-organize-imports` formatters to `languages.ts`.
+
+- Added [`biomejs`](https://biomejs.dev/) as extra diagnostics provider to
+  `languages.ts`.
+
 - Add `languages.fluent` using the official plugin. This only provides
   highlighting.
 
