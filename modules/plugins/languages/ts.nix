@@ -120,6 +120,11 @@
         end
       '';
     };
+
+    tsgo = {
+      cmd = [(getExe pkgs.typescript-go) "--lsp" "--stdio"];
+      root_markers = ["tsconfig.json" "jsconfig.json" "package.json" ".git"];
+    };
   };
 
   denols_handlers = ''

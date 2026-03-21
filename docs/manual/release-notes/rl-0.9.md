@@ -246,6 +246,9 @@
 - Fix `languages.hcl` init, depending on `comment-nvim` by checking if it is
   enabled. Fixes a crash (#1350).
 
+- Added [`tsgo`](https://github.com/microsoft/typescript-go) as an LSP to
+  `languages.ts`.
+
 - Add `languages.fluent` using the official plugin. This only provides
   highlighting.
 
