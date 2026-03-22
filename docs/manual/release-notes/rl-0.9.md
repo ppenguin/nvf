@@ -269,6 +269,9 @@
   [twig-cs-fixer](https://github.com/VincentLanglet/Twig-CS-Fixer) aren't
   packaged for nix.
 
+- Added `languages.tex`. Currently only highlighting, formatting and lsp. No
+  previewing yet.
+
 - Didn't Add
   [`syntax-gaslighting`](https://github.com/NotAShelf/syntax-gaslighting.nvim),
   you're crazy.
