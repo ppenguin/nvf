@@ -77,6 +77,7 @@ isMaximal: {
       tex.enable = isMaximal;
 
       # Language modules that are not as common.
+      openscad.enable = false;
       arduino.enable = false;
       assembly.enable = false;
       astro.enable = false;
