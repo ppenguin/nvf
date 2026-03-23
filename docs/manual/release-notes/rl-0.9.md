@@ -263,6 +263,8 @@
 - Add `languages.fluent` using the official plugin. This only provides
   highlighting.
 
+- Add `languages.gettext`. This only provides highlighting.
+
 - Add `languages.openscad` using
   [`openscad-lsp`](https://github.com/Leathong/openscad-LSP). This currently
   relies on neovim builtin syntax for highlighting, and the lsp for formatting
