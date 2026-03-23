@@ -259,6 +259,11 @@
 - Add `languages.fluent` using the official plugin. This only provides
   highlighting.
 
+- Add `languages.openscad` using
+  [`openscad-lsp`](https://github.com/Leathong/openscad-LSP). This currently
+  relies on neovim builtin syntax for highlighting, and the lsp for formatting
+  and diagnostics.
+
 - Added Debugging support to `languages.php`.
 
 - Added Formatting support to `languages.php` via

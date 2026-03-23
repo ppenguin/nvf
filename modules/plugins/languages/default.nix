@@ -61,6 +61,7 @@ in {
     ./make.nix
     ./xml.nix
     ./fluent.nix
+    ./openscad.nix
 
     # This is now a hard deprecation.
     (mkRenamedOptionModule ["vim" "languages" "enableLSP"] ["vim" "lsp" "enable"])
