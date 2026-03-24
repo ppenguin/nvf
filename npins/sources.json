@@ -394,6 +394,22 @@
       "url": "https://github.com/Saecki/crates.nvim/archive/ac9fa498a9edb96dc3056724ff69d5f40b898453.tar.gz",
       "hash": "sha256-jfmST/S9ymwgQ99PTCOlJkk5zaxE5HiDV16TmTISDII="
     },
+    "crazy-coverage": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mr-u0b0dy",
+        "repo": "crazy-coverage.nvim"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v2.1.0",
+      "revision": "1c9223bdc6f2966be0e5d4dc73c9404003eca5b4",
+      "url": "https://api.github.com/repos/mr-u0b0dy/crazy-coverage.nvim/tarball/refs/tags/v2.1.0",
+      "hash": "sha256-D9hbxvjTbpLv2fXwtKbzFiSgkUj3uNd3YowZ/GrEQjM="
+    },
     "csharpls-extended-lsp-nvim": {
       "type": "Git",
       "repository": {

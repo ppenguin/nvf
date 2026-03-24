@@ -259,6 +259,11 @@
 - Add `languages.fluent` using the official plugin. This only provides
   highlighting.
 
+- Add `languages.openscad` using
+  [`openscad-lsp`](https://github.com/Leathong/openscad-LSP). This currently
+  relies on neovim builtin syntax for highlighting, and the lsp for formatting
+  and diagnostics.
+
 - Added Debugging support to `languages.php`.
 
 - Added Formatting support to `languages.php` via
@@ -278,6 +283,9 @@
 
 - Added neovim theme `gruber-darker`
   <https://github.com/blazkowolf/gruber-darker.nvim>.
+
+- Added coverage support (`vim.utility.crazy-coverage`) via
+  [`crazy-coverage.nvim`](https://github.com/mr-u0b0dy/crazy-coverage.nvim).
 
 [vagahbond](https://github.com/vagahbond): [codewindow.nvim]:
 https://github.com/gorbit99/codewindow.nvim

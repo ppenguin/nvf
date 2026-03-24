@@ -13,6 +13,9 @@ isMaximal: {
       logFile = "/tmp/nvim.log";
     };
 
+    # vim.opts and vim.options are aliased
+    opts.expandtab = true;
+
     spellcheck = {
       enable = true;
       programmingWordlist.enable = isMaximal;
@@ -77,6 +80,7 @@ isMaximal: {
       tex.enable = isMaximal;
 
       # Language modules that are not as common.
+      openscad.enable = false;
       arduino.enable = false;
       assembly.enable = false;
       astro.enable = false;
