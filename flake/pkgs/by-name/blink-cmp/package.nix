@@ -54,4 +54,3 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Saghen/blink.cmp/blob/v${finalAttrs.version}/CHANGELOG.md";
   };
 })
-Z
