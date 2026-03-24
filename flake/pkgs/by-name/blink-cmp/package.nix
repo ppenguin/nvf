@@ -37,7 +37,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   # From the blink.cmp flake
-  buildInputs = lib.optionals stdenv.hostPlatform.isAarch64 [ rust-jemalloc-sys ];
+  buildInputs = lib.optionals stdenv.hostPlatform.isAarch64 [rust-jemalloc-sys];
 
   cargoHash = "sha256-3o2n4xwNF9Fc3VlPKf3lnvmN7FVus5jQB8gcXXwz50c=";
 
@@ -54,3 +54,4 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Saghen/blink.cmp/blob/v${finalAttrs.version}/CHANGELOG.md";
   };
 })
+Z
