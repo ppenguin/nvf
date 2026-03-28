@@ -283,6 +283,8 @@
 - Added `languages.tex`. Currently only highlighting, formatting and lsp. No
   previewing yet.
 
+- Added `languages.jq`. Supports highlighting, formatting and lsp.
+
 - Didn't Add
   [`syntax-gaslighting`](https://github.com/NotAShelf/syntax-gaslighting.nvim),
   you're crazy.
