@@ -37,7 +37,7 @@ in {
             Default message target, either commandline or a separate window.
             Can alternatively specify different targets for different kinds of messages as an attrset.
             See [`:h ui-messages`](https://neovim.io/doc/user/api-ui-events/#ui-messages)
-            for the different message types you can use in this configration.
+            for the different message types you can use in this configuration.
             Separating the message types also allows sending to a 'pager' output.
           '';
           type = nullOr (oneOf [
